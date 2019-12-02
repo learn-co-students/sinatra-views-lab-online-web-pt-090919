@@ -5,10 +5,12 @@ Using ERB tags, and the DateTime library, display today's date in a p tag.
 The date should be formatted to look something like this
 The date is Wednesday, November 18, 2015. -->
 
+
 <!DOCTYPE html>
 <html>
     <body>
-      <%date = Date.today.strftime(%A, %B %d, %Y)%>
-        <h1><%="The date is #{date}" %></h1>
+      <!-- <%date = Date.today.strftime(%A, %B %d, %Y)%> -->
+      <h1><%= Date.today.strftime(%A, %B %d, %Y) %></h1>
+        <!-- <h1><%="The date is #{date}" %></h1> -->
     </body>
 </html>
